@@ -1,0 +1,30 @@
+.container {
+    border: 1px solid rgba(0,0,0,1);
+    height: 400px;
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+}
+
+.controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.messages {
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    padding-top: 0.7em;
+}
+
+.right {
+    width: fit-content;
+    margin-left: auto;
+}
+
+h3 {
+    text-align: center;
+}

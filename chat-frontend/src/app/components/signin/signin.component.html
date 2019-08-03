@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Login To DocChat</h1>
+  <mat-form-field class="full-width">
+    <input matInput type="text"  placeholder="Username" [(ngModel)]="username">
+  </mat-form-field>
+  <br>
+  <mat-slide-toggle
+  class="example-margin"
+  color="primary"
+  [(ngModel)]="isDoctor">Doctor</mat-slide-toggle>
+  <br>
+  <button mat-raised-button color="primary" (click)="setName()">Login</button>
+</div>

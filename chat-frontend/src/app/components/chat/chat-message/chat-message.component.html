@@ -1,0 +1,16 @@
+<ng-container *ngIf="data.type == 'join' || data.type == 'leave'">
+  <div class="join">
+    {{data.username}} {{ data.type == 'join' ? 'joined' : 'left'}} the chat
+  </div>
+</ng-container>
+
+<ng-container *ngIf="data.type == 'msg'">
+
+  <mat-card [class.right]="data.username == 'self'">
+    {{data.message}}
+  </mat-card>
+
+  <!-- <div class="message">
+    {{data.message}}
+  </div> -->
+</ng-container>

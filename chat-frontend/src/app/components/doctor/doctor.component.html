@@ -1,0 +1,15 @@
+<div *ngIf="requestDisplay">
+  <h3>List of active requests</h3>
+  <ng-container *ngFor="let req of requests; let i = index">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{req.username}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="acceptRequest(i)">Accept</button>
+        <button mat-raised-button color="warn" (click)="rejectRequest(i)">Reject</button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div>
+<router-outlet></router-outlet>

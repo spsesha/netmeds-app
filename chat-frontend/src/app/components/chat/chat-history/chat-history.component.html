@@ -1,0 +1,17 @@
+<button mat-raised-button color="primary" (click)="createRoom()">Chat with doctor</button>
+
+<h3>List of previous chats</h3>
+
+<ng-container *ngIf="chatList.length == 0">
+    No previous chat(s)
+</ng-container>
+
+<div class="grid-container">
+    <mat-card *ngFor="let chat of chatList">
+        <mat-card-header>
+            <mat-card-title>Chat with {{chat.doctor}}</mat-card-title>
+            <mat-card-subtitle>on {{chat.createdDate | date}}</mat-card-subtitle>
+        </mat-card-header>
+        <button mat-button (click)="chatHistory(chat.room)">View</button>
+    </mat-card>
+</div>

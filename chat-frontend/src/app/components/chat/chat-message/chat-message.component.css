@@ -1,0 +1,18 @@
+.join {
+    text-align: center;
+    font-style: italic;
+    color: rgba(0,0,0,0.4);
+}
+
+.mat-card {
+    max-width: 200px;
+    margin-bottom: 5px;
+    padding: 8px;
+    width: fit-content;
+    font-size: 15px;
+}
+
+.right {
+    margin-left: auto;
+    background-color: rgba(0,0,0,0.1)
+}

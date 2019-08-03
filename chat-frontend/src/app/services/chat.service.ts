@@ -10,7 +10,7 @@ export class ChatService {
 
   private url = 'http://localhost:3000'
   private socket
-  private username: string
+  public username: string
   public isDoctor: boolean
   private room: string
 

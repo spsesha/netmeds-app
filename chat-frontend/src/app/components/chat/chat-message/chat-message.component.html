@@ -6,7 +6,7 @@
 
 <ng-container *ngIf="data.type == 'msg'">
 
-  <mat-card [class.right]="data.username == 'self'">
+  <mat-card [class.right]="data.username == 'self' || data.username == username">
     {{data.message}}
   </mat-card>
 

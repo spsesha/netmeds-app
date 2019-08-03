@@ -23,7 +23,12 @@ module.exports.createRoom = (room, user, next) => {
 }
 
 module.exports.roomEvent = (room, doctor, type, next) => {
-    Chat.findOneAndUpdate({room: room}, {doctor: doctor, $push: { messages: {username: doctor, type: type}}})
+    let update = {
+        $push: { messages: { username: doctor, type: type }}
+    }
+    if(type == 'join')
+        update.doctor = doctor
+    Chat.findOneAndUpdate({room: room}, update)
         .exec((err, data) => {
             next(err, data)
         })

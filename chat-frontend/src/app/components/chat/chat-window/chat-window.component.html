@@ -2,7 +2,7 @@
   Chat Room 
 </h3>
 <div class="container">
-  <div class="messages">
+  <div class="messages" #scrollMsg [scrollTop]="scrollMsg.scrollHeight">
       <ng-container *ngFor="let msg of chats" >
         <!-- <div [class.right]="msg.username == 'self'">{{msg.username}} <br> {{msg.message}}</div> -->
         <app-chat-message [data]="msg"></app-chat-message>
@@ -13,7 +13,7 @@
       <mat-icon>clear</mat-icon>
     </button>
     <!-- <mat-form-field class="full-width"> -->
-      <input type="text" [(ngModel)]="message" [disabled]="isDisabled">
+      <input type="text" [(ngModel)]="message" [disabled]="isDisabled" (keyup.enter)="sendData()" >
     <!-- </mat-form-field> -->
     <button class="send-message" (click)="sendData()" mat-icon-button color="primary" [disabled]="isDisabled">
       <mat-icon>send</mat-icon>
